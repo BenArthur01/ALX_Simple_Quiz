@@ -1,3 +1,8 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const submitBtn = document.getElementById("submit-answer");
+    submitBtn.addEventListener("click", checkAnswer);
+});
+
 function checkAnswer() {
     // Step 1: Define the correct answer
     const correctAnswer = "4";
@@ -16,15 +21,10 @@ function checkAnswer() {
     // Step 4: Compare and give feedback
     const feedback = document.getElementById("feedback");
     if (userAnswer === correctAnswer) {
-        feedback.textContent = "Correct! Well done";
+        feedback.textContent = "Correct! Well done.";
         feedback.style.color = "#28a745"; // green
     } else {
         feedback.textContent = "That's incorrect. Try again!";
         feedback.style.color = "#dc3545"; // red
     }
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-    const submitBtn = document.getElementById("submit-answer");
-    submitBtn.addEventListener("click", checkAnswer);
-});
